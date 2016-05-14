@@ -13,9 +13,11 @@ Package to set configuration options useful while developing or debugging concre
 1. Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory.
 2. Install via the concrete5 dashboard
 
-Package version: **1.1.1**
+Current Package version: **1.1.1**
 
-Compatible with concrete5 version: **5.7.5.7** (update $appVersionRequired variable if you need to install on earlier versions)
+Compatible concrete5 version: **5.7.5.7** (update $appVersionRequired variable if you need to install on earlier versions)
+
+License: **MIT**
 
 # Other useful development add-ons:
 
