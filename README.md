@@ -10,7 +10,8 @@ Package to set configuration options useful while developing or debugging concre
 
 #Installation
 
-Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory.
+1. Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory.
+2. Install via the concrete5 dashboard
 
 Package version: **1.1.1**
 
