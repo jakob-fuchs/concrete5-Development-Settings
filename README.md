@@ -10,11 +10,7 @@ Package to set configuration options useful while developing or debugging concre
 
 #Installation
 
-Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory:
-
-```shell
-git clone https://jakob_fuchs@bitbucket.org/jakob_fuchs/concrete5-development-settings-package.git jaf_development_settings
-```
+Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory.
 
 Package version: **1.1.1**
 
