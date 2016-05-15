@@ -1,4 +1,4 @@
-#About
+# concrete5 Development Settings
 
 Package to set configuration options useful while developing or debugging concrete5 themes or other functionality. Just install it when you need it, uninstall it when you are done.
 
@@ -8,12 +8,12 @@ Package to set configuration options useful while developing or debugging concre
 - Disable help system and news flow overlay
 - Optionally disable market place integration (uncomment in controller.php)
 
-#Installation
+# Installation
 
 1. Clone into a folder named "jaf_development_settings" in your concrete5 site's /packages directory.
 2. Install via the concrete5 dashboard
 
-Current Package version: **1.1.1**
+Current Package version: **1.2.0**
 
 Compatible concrete5 version: **5.7.5.7** (update $appVersionRequired variable if you need to install on earlier versions)
 
