@@ -4,9 +4,9 @@ namespace Concrete\Package\JafDevelopmentSettings;
 
 defined('C5_EXECUTE') or die(_('Access Denied.'));
 
+use Config;
 use Core;
 use Package;
-use Config;
 
 class Controller extends Package {
 
