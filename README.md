@@ -1,12 +1,15 @@
 # concrete5 Development Settings
 
-Package to set configuration options useful while developing or debugging concrete5 themes or other functionality. Just install it when you need it, uninstall it when you are done.
+Sets configuration options useful while developing or debugging concrete5 themes or other functionality. Just install it when you need it, uninstall it when you are done.
 
 - Enable maintenance mode
 - Enable more useful debug error messages
 - Disable caching
+- Disable compression of Less files and enable Less Sourcemaps
+- Enable logging
 - Disable help system and news flow overlay
-- Optionally disable market place integration (uncomment in controller.php)
+
+Just comment out the parts you don't want to use in the package controller.
 
 # Installation
 
@@ -15,7 +18,7 @@ Package to set configuration options useful while developing or debugging concre
 
 Current Package version: **1.2.0**
 
-Compatible concrete5 version: **5.7.5.7** (update $appVersionRequired variable if you need to install on earlier versions)
+Compatible concrete5 version: **5.7.5.7** (update $appVersionRequired variable in the package controller if you need to install on earlier versions)
 
 License: **MIT**
 
