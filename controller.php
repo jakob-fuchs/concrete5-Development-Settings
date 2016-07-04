@@ -11,8 +11,8 @@ use Package;
 class Controller extends Package {
 
   protected $pkgHandle = 'jaf_development_settings';
-  protected $pkgVersion = '1.2.0';
-  protected $appVersionRequired = '5.7.5.7';
+  protected $pkgVersion = '1.3.0';
+  protected $appVersionRequired = '5.7.5.8';
 
   public function getPackageName() { return t('Development Settings'); }
 
