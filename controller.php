@@ -67,6 +67,11 @@ class Controller extends Package {
     Config::set('concrete.log.queries.log', true);
 
     /* --------------------------------------------------------------------------  *
+     * Prevent logout when user agent string changes
+     * -------------------------------------------------------------------------- */
+    Config::set('concrete.security.session.invalidate_on_user_agent_mismatch', false);
+
+    /* --------------------------------------------------------------------------  *
      * Disable help system and news overlay (because it's annoying)
      * -------------------------------------------------------------------------- */
     Config::set('concrete.accessibility.display_help_system', false);
