@@ -29,7 +29,7 @@ class Controller extends Package {
     /* --------------------------------------------------------------------------  *
      * Enable maintenance mode
      * ------------------------------------------------------------------------- */
-    Config::set('concrete.maintenance_mode', true);
+    // Config::set('concrete.maintenance_mode', true);
 
     /* --------------------------------------------------------------------------  *
      * Enable more useful debug messages
