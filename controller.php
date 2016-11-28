@@ -11,8 +11,8 @@ use Package;
 class Controller extends Package {
 
   protected $pkgHandle = 'jaf_development_settings';
-  protected $pkgVersion = '1.3.0';
-  protected $appVersionRequired = '5.7.5.8';
+  protected $pkgVersion = '1.4.0';
+  protected $appVersionRequired = '5.7.5.9';
 
   public function getPackageName() { return t('Development Settings'); }
 
@@ -20,40 +20,42 @@ class Controller extends Package {
 
   public function on_start() {
 
+    $app = \Concrete\Core\Support\Facade\Application::getFacadeApplication();
+    $config = $app->make('config');
+
     /* --------------------------------------------------------------------------  *
      * Clear cache on every page load; considerably slows down page load
      * -------------------------------------------------------------------------- */
-    // $cms = Core::make('app');
-    // $cms->clearCaches();
+    // $app->clearCaches();
 
     /* --------------------------------------------------------------------------  *
      * Enable maintenance mode
      * ------------------------------------------------------------------------- */
-    // Config::set('concrete.maintenance_mode', true);
+    // $config->set('concrete.maintenance_mode', true);
 
     /* --------------------------------------------------------------------------  *
      * Enable more useful debug messages
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.debug.display_errors', true);
-    Config::set('concrete.debug.detail', 'debug');
+    $config->set('concrete.debug.display_errors', true);
+    $config->set('concrete.debug.detail', 'debug');
 
     /* --------------------------------------------------------------------------  *
      * Disable all caching
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.cache.enabled', false);
-    Config::set('concrete.cache.overrides', false);
-    Config::set('concrete.cache.blocks', false);
-    Config::set('concrete.cache.assets', false);
-    Config::set('concrete.cache.theme_css', false);
-    Config::set('concrete.cache.pages', false);
+    $config->set('concrete.cache.enabled', false);
+    $config->set('concrete.cache.overrides', false);
+    $config->set('concrete.cache.blocks', false);
+    $config->set('concrete.cache.assets', false);
+    $config->set('concrete.cache.theme_css', false);
+    $config->set('concrete.cache.pages', false);
     // Not sure what this does, but it sounds useful:
-    Config::set('concrete.cache.doctrine_dev_mode', true);
+    $config->set('concrete.cache.doctrine_dev_mode', true);
 
     /* --------------------------------------------------------------------------  *
      * Disable Less compression and enable Less sourcemaps
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.theme.compress_preprocessor_output', false);
-    Config::set('concrete.theme.generate_less_sourcemap', true);
+    $config->set('concrete.theme.compress_preprocessor_output', false);
+    $config->set('concrete.theme.generate_less_sourcemap', true);
 
     /* --------------------------------------------------------------------------  *
      * Enable error logging and database query logging
@@ -63,20 +65,20 @@ class Controller extends Package {
      * -> Logs (clear at: /dashboard/reports/logs)
      * -> SystemDatabaseQueryLog (clear at: /dashboard/system/optimization/query_log/)
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.log.errors', true);
-    Config::set('concrete.log.queries.log', true);
+    $config->set('concrete.log.errors', true);
+    $config->set('concrete.log.queries.log', true);
 
     /* --------------------------------------------------------------------------  *
      * Prevent logout when user agent string changes
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.security.session.invalidate_on_user_agent_mismatch', false);
+    $config->set('concrete.security.session.invalidate_on_user_agent_mismatch', false);
 
     /* --------------------------------------------------------------------------  *
      * Disable help system and news overlay (because it's annoying)
      * -------------------------------------------------------------------------- */
-    Config::set('concrete.accessibility.display_help_system', false);
-    Config::set('concrete.external.news', false);
-    Config::set('concrete.external.news_overlay', false);
+    $config->set('concrete.accessibility.display_help_system', false);
+    $config->set('concrete.external.news', false);
+    $config->set('concrete.external.news_overlay', false);
 
   }
 
