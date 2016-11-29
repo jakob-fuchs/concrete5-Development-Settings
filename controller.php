@@ -4,14 +4,12 @@ namespace Concrete\Package\JafDevelopmentSettings;
 
 defined('C5_EXECUTE') or die(_('Access Denied.'));
 
-use Config;
-use Core;
 use Package;
 
 class Controller extends Package {
 
   protected $pkgHandle = 'jaf_development_settings';
-  protected $pkgVersion = '1.4.0';
+  protected $pkgVersion = '1.4.1';
   protected $appVersionRequired = '5.7.5.9';
 
   public function getPackageName() { return t('Development Settings'); }
