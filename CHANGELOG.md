@@ -11,3 +11,7 @@
 ## Version 1.4.1 - *November, 29th 2016*
 
 - Remove unused use statments
+
+## Version 1.4.2 - *December, 2nd 2016*
+
+- Use [PSR-2 coding standard](http://www.php-fig.org/psr/psr-2/)
